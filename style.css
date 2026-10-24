@@ -13,6 +13,10 @@
   --accent-strong: #c77a35;
   --card: rgba(49, 28, 16, 0.72);
   --shadow: rgba(0, 0, 0, 0.28);
+  --sofa: #d8d1c7;
+  --sofa-dark: #a8a39d;
+  --sofa-soft: #ebe3d9;
+  --metal: #1d1d1f;
 }
 
 * {
@@ -207,14 +211,76 @@ button {
 .main-image {
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.main-image img {
-  width: 100%;
+.sofa-visual {
+  position: relative;
   height: 380px;
-  object-fit: cover;
+  background: linear-gradient(135deg, #d8d3ca 0%, #cfc9c0 100%);
+  overflow: hidden;
+}
+
+.sofa-body {
+  position: absolute;
+  left: 12%;
+  right: 8%;
+  bottom: 12%;
+  height: 190px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(152,146,138,0.5));
+  border-radius: 50px 0 0 0;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.12);
+}
+
+.sofa-back {
+  position: absolute;
+  left: 28%;
+  right: 10%;
+  top: 8%;
+  bottom: 38%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(92,89,84,0.18));
+  border-radius: 20px 20px 0 0;
+  transform: skewX(-8deg);
+}
+
+.sofa-pill {
+  position: absolute;
+  background: linear-gradient(180deg, rgba(255,255,255,0.24), rgba(155,150,145,0.26));
+  border-radius: 18px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+}
+
+.pillow-1 {
+  width: 150px;
+  height: 110px;
+  left: 18%;
+  top: 26%;
+}
+
+.pillow-2 {
+  width: 150px;
+  height: 110px;
+  left: 42%;
+  top: 20%;
+}
+
+.pillow-3 {
+  width: 180px;
+  height: 120px;
+  right: 12%;
+  top: 24%;
+}
+
+.sofa-roll {
+  position: absolute;
+  right: 4%;
+  bottom: 20%;
+  width: 180px;
+  height: 100px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(150,146,139,0.28));
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
 }
 
 .thumb-row {
@@ -224,12 +290,24 @@ button {
   margin-top: 14px;
 }
 
-.thumb-row img {
+.thumb {
   width: 100%;
   height: 72px;
-  object-fit: cover;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(130,125,120,0.18));
+}
+
+.thumb-one {
+  background: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(163,158,151,0.28));
+}
+
+.thumb-two {
+  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(145,140,134,0.26));
+}
+
+.thumb-three {
+  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(170,162,156,0.28));
 }
 
 .product-body {
@@ -248,7 +326,7 @@ button {
 .product-body h2 {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
   line-height: 0.95;
   letter-spacing: -0.04em;
   color: #f1eadf;
@@ -330,17 +408,9 @@ button {
   text-align: left;
 }
 
-.select-box.wide {
-  max-width: 500px;
-}
-
 .caret {
   color: var(--muted-2);
   font-size: 1.2rem;
-}
-
-.selector-row.last {
-  margin-top: 14px;
 }
 
 .add-cart {
@@ -366,7 +436,7 @@ button {
 .story-block h3 {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
   line-height: 1;
   letter-spacing: -0.04em;
   color: #f4f0e8;
@@ -374,7 +444,7 @@ button {
 }
 
 .story-block p {
-  margin: 18px 0 0;
+  margin: 12px 0 18px;
   color: var(--muted);
   font-size: 1.08rem;
   line-height: 1.65;
@@ -415,8 +485,8 @@ button {
     font-size: 2.6rem;
   }
 
-  .main-image img {
-    height: 285px;
+  .sofa-visual {
+    height: 290px;
   }
 
   .selector-row {
